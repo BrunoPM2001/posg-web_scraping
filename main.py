@@ -12,16 +12,6 @@ import os
 load_dotenv()
 app = Flask(__name__)
 
-@app.route('/vars', methods=['GET'])
-def vars():
-  print(os.getenv('URL_LOGIN'))
-  print(os.getenv('URL_DATA'))
-  print(os.getenv('USERNAME'))
-  print(os.getenv('PASSWORD'))
-  print(os.getenv('EXTRA_HEADER'))
-
-  return jsonify(os.getenv('URL_DATA'))
-
 @app.route('/get-text', methods=['GET'])
 def get_text():
 
